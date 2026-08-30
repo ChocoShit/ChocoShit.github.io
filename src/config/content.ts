@@ -1,18 +1,18 @@
 export const siteConfig = {
-  name: "Your Portfolio",
-  title: "Someone's Portfolio",
+  name: "My Portfolio",
+  title: "Rodrigo Moncada - Portfolio",
   description: "A showcase of my work and thoughts",
   social: {
-    github: "https://github.com/tomcomtang/astro-multiplepage-portfolio",
-    twitter: "https://x.com/astrodotbuild",
+    github: "https://github.com/ChocoShit",
+    //twitter: "https://x.com/astrodotbuild",
     email: "mailto:364786053@qq.com",
   },
 };
 
 export const homeContent = {
-  title: "Hello, I'm Your Name",
+  title: "Hello, I'm Rodrigo Moncada",
   description:
-    "A passionate frontend developer with a keen eye for design and a love for creating beautiful, functional web experiences.",
+    "A passionate frontend and database developer, i make desings to your needs, without losing funcionality. Experience in virtual and augmented reality development, web pages and desktop applications for companies.",
   buttons: {
     about: {
       text: "View About",
@@ -31,48 +31,62 @@ export const homeContent = {
 
 export const aboutContent = {
   meta: {
-    title: "About - Your Portfolio",
+    title: "About - My Portfolio",
     description: "Learn more about my background, skills, and experience",
   },
   title: "About Me",
   description:
-    "This is where you can introduce yourself or your company. Share your story, mission, and values. Explain what makes you unique and why people should be interested in your work. Keep it concise but engaging.",
+    "I am a developer experienced in creating virtual and augmented reality applications, web solutions, and desktop software, combining creativity and technology to build useful, immersive experiences. Throughout my career, I have worked with Unity, Visual Studio, Visual Studio Code, and languages ​​such as C#, C++, JavaScript, TypeScript, HTML, and CSS, as well as tools and environments like Node, npm, Blade, Astro, Tailwind CSS, and Git. My mission is to transform ideas into functional, engaging products, always maintaining a focus on quality, innovation, and continuous learning.",
   skills: [
-    "Next.js",
-    "React",
+    "Unity",
+    "Visual Studio",
+    "Visual Studio Code",
+    "C#",
+    "C++",
+    "JavaScript",
     "TypeScript",
-    "Tailwind CSS",
+    "HTML",
+    "CSS",
     "Node.js",
-    "Docker",
+    "npm",
+    "Blade",
+    "Astro",
+    "Tailwind CSS",
     "Git",
-    "AWS",
   ],
   image: {
-    src: "/assets/images/about/coder.jpg",
+    src: "/assets/images/about/portfolio.jpeg",
     alt: "Profile",
   },
   experience: {
     title: "Experience",
     items: [
       {
-        period: "2022 - Present",
-        position: "Senior Frontend Developer",
+        period: "2026 - Present",
+        position: "",
         company: "Tencent Cloud",
         description:
           "Leading frontend development for EdgeOne platform and templates.",
       },
       {
-        period: "2020 - 2022",
-        position: "Frontend Developer",
-        company: "Tencent Cloud",
+        period: "06/2025 - 10/2025",
+        position: "Support Systems",
+        company: "Universidad Cesar Vallejo",
         description:
-          "Developed and maintained multiple web applications and tools.",
+          "I developed and maintained various web applications and tools, in addition to providing support to professors and students.",
       },
       {
-        period: "2018 - 2020",
-        position: "Junior Developer",
-        company: "Tencent Cloud",
-        description: "Worked on various client projects and internal tools.",
+        period: "2024 - 2025",
+        position: "Support Systems",
+        company: "Universidad Cesar Vallejo",
+        description:
+          "I developed and maintained various web applications and tools, in addition to providing support to professors and students.",
+      },
+      {
+        period: "07/2023 - 11/2023",
+        position: "Support Systems",
+        company: "Salud Ocupacional Norte",
+        description: "Worked on data center support and maintenance, creation of medical reports, and development of new technologies.",
       },
     ],
   },

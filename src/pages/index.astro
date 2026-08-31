@@ -7,7 +7,7 @@ import { siteConfig, homeContent } from "../config/content.ts";
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <title>{siteConfig.title}</title>
@@ -113,14 +113,14 @@ import { siteConfig, homeContent } from "../config/content.ts";
         </div>
       </div>
 
-      <Navigation />
+      <Navigation />      
       <div class="relative flex flex-col flex-1 pt-4 min-h-0">
         <main class="flex-grow flex flex-col min-h-0">
           <div class="flex-1 flex items-center justify-center min-h-0">
             <div
-              class="flex flex-row items-center justify-between w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 gap-12"
+              class="flex flex-col md:flex-row items-center justify-between w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 gap-12"
             >
-              <div class="w-[45%] text-left">
+              <div class="w-full md:w-[45%] text-left">
                 <h1
                   class="text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-4xl"
                 >
@@ -149,8 +149,8 @@ import { siteConfig, homeContent } from "../config/content.ts";
                   >
                   <a
                     class="group inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-neutral-900 bg-white border border-neutral-300 rounded-lg hover:bg-neutral-50 dark:bg-neutral-800 dark:text-neutral-100 dark:border-neutral-600 dark:hover:bg-neutral-700 transition-all duration-300 hover:scale-105 cursor-pointer"
-                    href={homeContent.buttons.posts.href}
-                    >{homeContent.buttons.posts.text}<svg
+                    href={homeContent.buttons.projects.href}
+                    >{homeContent.buttons.projects.text}<svg
                       class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"
                       fill="none"
                       stroke="currentColor"
@@ -165,7 +165,7 @@ import { siteConfig, homeContent } from "../config/content.ts";
                 </div>
               </div>
               <div
-                class="relative w-[45%] flex items-center justify-center bg-transparent overflow-hidden z-20"
+                class="relative w-full md:w-[45%] flex items-center justify-center bg-transparent overflow-hidden z-20"
               >
                 <div
                   class="relative overflow-hidden"

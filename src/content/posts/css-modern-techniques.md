@@ -3,7 +3,7 @@ title: "Modern CSS Techniques and Best Practices"
 description: "Explore cutting-edge CSS features and modern styling approaches"
 date: "2024-03-26"
 readTime: "6 min read"
-image: "/assets/images/posts/post1.jpg"
+image: "/assets/images/projects/post1.jpg"
 slug: "css-modern-techniques"
 ---
 

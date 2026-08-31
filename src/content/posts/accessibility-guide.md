@@ -3,7 +3,7 @@ title: "Web Accessibility: A Comprehensive Guide"
 description: "Make your web applications accessible to all users"
 date: "2024-04-02"
 readTime: "8 min read"
-image: "/assets/images/posts/post1.jpg"
+image: "/assets/images/projects/post1.jpg"
 slug: "accessibility-guide"
 ---
 

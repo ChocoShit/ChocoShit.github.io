@@ -4,8 +4,8 @@ export const siteConfig = {
   description: "A showcase of my work and thoughts",
   social: {
     github: "https://github.com/ChocoShit",
-    //twitter: "https://x.com/astrodotbuild",
-    email: "mailto:364786053@qq.com",
+    whatsapp: "https://wa.me/34677543431",
+    email: "mailto:chocoshitdev@gmail.com?body=Hello%20Rodrigo",
   },
 };
 
@@ -18,9 +18,9 @@ export const homeContent = {
       text: "View About",
       href: "/about/",
     },
-    posts: {
-      text: "Read Posts",
-      href: "/posts/",
+    projects: {
+      text: "View Projects",
+      href: "/projects/",
     },
   },
   images: {
@@ -36,7 +36,7 @@ export const aboutContent = {
   },
   title: "About Me",
   description:
-    "I am a developer experienced in creating virtual and augmented reality applications, web solutions, and desktop software, combining creativity and technology to build useful, immersive experiences. Throughout my career, I have worked with Unity, Visual Studio, Visual Studio Code, and languages ​​such as C#, C++, JavaScript, TypeScript, HTML, and CSS, as well as tools and environments like Node, npm, Blade, Astro, Tailwind CSS, and Git. My mission is to transform ideas into functional, engaging products, always maintaining a focus on quality, innovation, and continuous learning.",
+    "I am a developer experienced in creating virtual and augmented reality applications, web solutions, and desktop software, combining creativity and technology to build useful, immersive experiences. Throughout my career, I have worked with Unity, Visual Studio, Visual Studio Code, and languages ​​such as C#, C++, JavaScript, TypeScript, SQL, HTML, and CSS, as well as tools and environments like Node, npm, Blade, Astro, Tailwind CSS, and Git. My mission is to transform ideas into functional, engaging products, always maintaining a focus on quality, innovation, and continuous learning.",
   skills: [
     "Unity",
     "Visual Studio",
@@ -53,9 +53,10 @@ export const aboutContent = {
     "Astro",
     "Tailwind CSS",
     "Git",
+    "SQL",
   ],
   image: {
-    src: "/assets/images/about/portfolio.jpeg",
+    src: "/assets/images/about/portfolio.png",
     alt: "Profile",
   },
   experience: {
@@ -63,17 +64,17 @@ export const aboutContent = {
     items: [
       {
         period: "2026 - Present",
-        position: "",
-        company: "Tencent Cloud",
+        position: "Support System",
+        company: "Fast Click Tech",
         description:
-          "Leading frontend development for EdgeOne platform and templates.",
+          "I performed equipment maintenance, installed and configured security cameras, installed solar panels, and scanned electric vehicless.",
       },
       {
         period: "06/2025 - 10/2025",
         position: "Support Systems",
-        company: "Universidad Cesar Vallejo",
+        company: "Grupo Palermo",
         description:
-          "I developed and maintained various web applications and tools, in addition to providing support to professors and students.",
+          "I performed hardware maintenance and repairs for equipment from various companies.",
       },
       {
         period: "2024 - 2025",
@@ -93,10 +94,10 @@ export const aboutContent = {
   connect: {
     title: "Let's Connect",
     description:
-      "Feel free to reach out if you want to collaborate or just say hi! You can find us on social media or drop us an",
+      "Feel free to reach out if you want to collaborate or just say hi! You can find me on social media or drop me an",
     email: {
       text: "email",
-      href: "mailto:364786053@qq.com",
+      href: "mailto:chocoshitdev@gmail.com?body=Hello%20Rodrigo",
     },
   },
 };

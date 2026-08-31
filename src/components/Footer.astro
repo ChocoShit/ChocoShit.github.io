@@ -15,35 +15,46 @@ import { siteConfig } from "../config/content";
         class="text-xl -translate-y-0.5 group-hover:-rotate-12 group-hover:scale-[1.2] ease-in-out duration-300"
         >✦</span
       >
-      <span class="-translate-y-0.5">Your Name</span>
+      <span class="-translate-y-0.5">Rodrigo Moncada</span>
     </a>
     <p
       class="mt-2 text-sm text-neutral-700 dark:text-neutral-300 sm:ml-4 sm:pl-4 sm:border-l sm:border-neutral-700 dark:sm:border-neutral-300 sm:mt-0"
     >
-      © 2025 Your Name. All rights reserved.
+      © 2026 Rodrigo Moncada. All rights reserved.
     </p>
     <span
       class="inline-flex justify-center mt-2 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start"
     >
       <a
-        href={siteConfig.social.twitter}
-        target="_blank"
-        class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-400 dark:hover:text-neutral-300"
-      >
-        <span class="sr-only">𝕏</span>
-        <svg
-          class="w-5 h-5"
-          viewBox="0 0 100 100"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M95 50c0 24.853-20.147 45-45 45S5 74.853 5 50 25.147 5 50 5s45 20.147 45 45Zm-51.21 2.688-21.51-28.76h16.578l14.1 18.855 17.453-18.855h4.872L55.135 45.694l22.72 30.377H61.279L45.967 55.598l-18.95 20.473h-4.873L43.79 52.688Zm-6.73-25.172h-7.616l33.63 44.967h7.616L37.06 27.516Z"
-            fill="currentColor"></path>
-        </svg>
-      </a>
+  href={siteConfig.social.whatsapp}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Contactar por WhatsApp"
+  title="Contactar por WhatsApp"
+  class="text-neutral-500 transition-colors hover:text-green-500 dark:text-neutral-400 dark:hover:text-green-400"
+>
+  <span class="sr-only">WhatsApp</span>
+
+  <svg
+    class="h-5 w-5"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <path
+      d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.5L3.5 20.5l1.4-4.3A8.5 8.5 0 1 1 20.5 11.6Z"
+      stroke="currentColor"
+      stroke-width="1.8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M8.1 7.8c.3-.3.7-.2.9.1l1.1 1.6c.2.3.2.7-.1 1l-.6.6c.7 1.5 1.9 2.7 3.4 3.4l.6-.6c.3-.3.7-.3 1-.1l1.6 1.1c.3.2.4.6.1.9-.7.9-1.8 1.3-2.9 1-3.5-.9-6.2-3.6-7.1-7.1-.3-1.1.1-2.2 1-2.9Z"
+      fill="currentColor"
+    />
+  </svg>
+</a>
       <a
         href={siteConfig.social.github}
         target="_blank"

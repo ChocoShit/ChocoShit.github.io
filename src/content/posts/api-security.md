@@ -3,7 +3,7 @@ title: "API Security Best Practices"
 description: "Essential security practices for building secure REST and GraphQL APIs"
 date: "2024-03-27"
 readTime: "8 min read"
-image: "/assets/images/posts/post2.jpg"
+image: "/assets/images/projects/post2.jpg"
 slug: "api-security"
 ---
 

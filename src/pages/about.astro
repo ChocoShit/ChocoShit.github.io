@@ -88,14 +88,14 @@ import { aboutContent } from "../config/content.ts";
           class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_50%,transparent_0%,rgba(255,255,255,0.5)_60%,rgba(255,255,255,0.9)_85%,white_100%)] dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_50%,transparent_0%,rgba(23,23,23,0.5)_60%,rgba(23,23,23,0.9)_85%,rgb(23,23,23)_100%)] -z-10"
         >
         </div>
-        <div
-          class="absolute left-0 right-0 top-0 -z-10 m-auto h-[1200px] w-[1200px] rounded-full bg-neutral-400 opacity-10 blur-[100px]"
-        >
+        <div class="absolute inset-0 -z-10 flex items-center justify-center">
+          <div class="h-[600px] w-[600px] md:h-[1200px] md:w-[1200px] rounded-full bg-neutral-400 opacity-10 blur-[100px] dark:bg-neutral-600 dark:opacity-15"></div>
+        </div>
         </div>
       </div>
 
       <Navigation />
-      <section class="relative z-20 w-full max-w-5xl mx-auto px-4 mt-24 mb-12">
+      <section class="relative z-20 w-full max-w-5xl mx-auto px-4 mt-24 mb-12 overflow-hidden">
         <div class="relative z-20 w-full mx-auto lg:mx-0">
           <h2
             class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl"

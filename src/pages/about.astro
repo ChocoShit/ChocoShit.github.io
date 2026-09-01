@@ -145,33 +145,25 @@ import { aboutContent } from "../config/content.ts";
             <div class="py-10">
               {
                 aboutContent.experience.items.map((item) => (
-                  <div class="pb-10 border-l border-gray-200 last:border-l-0 dark:border-neutral-700">
-                    <div class="relative flex flex-col justify-start pl-12">
-                      <div class="absolute top-0 left-0 z-40 flex items-center justify-center -translate-x-1/2 bg-white border rounded-full dark:bg-neutral-950 w-14 h-14 border-neutral-300 dark:border-neutral-700">
-                        <svg
-                          class="w-8 h-8 text-neutral-700 dark:text-neutral-300"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.5"
-                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                          />
-                        </svg>
-                      </div>
-                      <p class="text-xs uppercase text-neutral-400 dark:text-neutral-500 tracking-widest">
+                  <div class="ml-2 pb-10 border-l border-gray-200 last:border-l-0 dark:border-neutral-700 sm:ml-0">
+                    <div class="relative flex flex-col justify-start pl-8 sm:pl-10">
+                      <div
+                        class="absolute top-1 left-0 z-40 h-4 w-4 -translate-x-1/2 rounded-full border-4 border-white bg-neutral-900 dark:border-neutral-900 dark:bg-neutral-100"
+                      ></div>
+
+                      <p class="text-xs uppercase tracking-widest text-neutral-400 dark:text-neutral-500">
                         {item.period}
                       </p>
-                      <h3 class="my-1 text-lg font-bold dark:text-neutral-100">
+
+                      <h3 class="my-1 text-lg font-bold text-neutral-900 dark:text-neutral-100">
                         {item.position}
                       </h3>
-                      <p class="mb-1 text-sm font-medium dark:text-neutral-300">
+
+                      <p class="mb-1 text-sm font-medium text-neutral-700 dark:text-neutral-300">
                         {item.company}
                       </p>
-                      <p class="text-sm font-light text-neutral-600 dark:text-neutral-400">
+
+                      <p class="text-sm font-light leading-6 text-neutral-600 dark:text-neutral-400">
                         {item.description}
                       </p>
                     </div>

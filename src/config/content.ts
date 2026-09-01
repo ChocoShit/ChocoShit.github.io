@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "My Portfolio",
+  name: "Me",
   title: "Rodrigo Moncada - Portfolio",
   description: "A showcase of my work and thoughts",
   social: {
@@ -10,7 +10,7 @@ export const siteConfig = {
 };
 
 export const homeContent = {
-  title: "Hello, I'm Rodrigo Moncada",
+  title: "Hello, I'm Rodrigo Moncada Arevalo",
   description:
     "A passionate frontend and database developer, i make desings to your needs, without losing funcionality. Experience in virtual and augmented reality development, web pages and desktop applications for companies.",
   buttons: {

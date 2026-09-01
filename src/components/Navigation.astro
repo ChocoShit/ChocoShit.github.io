@@ -1,71 +1,166 @@
 ---
-
 ---
 
-<!-- Navigation Bar Component -->
 <nav
   class="sticky top-0 z-50 w-full border-b border-neutral-200/70 bg-white/85 backdrop-blur-md dark:border-neutral-800/70 dark:bg-neutral-900/85"
 >
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
+    <div class="flex h-16 items-center justify-between">
+      <!-- Logo -->
       <a
-  href="/"
-  aria-label="Go to homepage"
-  class="flex items-center transition-transform duration-200 hover:scale-105"
->
-  <img
-    src="/logo.png"
-    alt="Choco logo"
-    width="40"
-    height="40"
-    class="h-10 w-10 rounded-xl object-contain"
-  />
-</a>
-      <div class="flex flex-wrap items-center gap-4">
-        <a
-          href="/"
-          class="text-sm sm:text-base text-neutral-600 hover:text-neutral-400 dark:text-neutral-400 dark:hover:text-neutral-200 transition-colors"
-          >Home</a
-        >
-        <a
-          href="/services/"
-          class="text-sm sm:text-base text-neutral-600 hover:text-neutral-400 dark:text-neutral-400 dark:hover:text-neutral-200 transition-colors"
-          >Services</a
-        >
-        <a
-          href="/projects/"
-          class="text-sm sm:text-base text-neutral-600 hover:text-neutral-400 dark:text-neutral-400 dark:hover:text-neutral-200 transition-colors"
-          >Projects</a
-        >
-        <a
-          href="/about/"
-          class="text-sm sm:text-base text-neutral-600 hover:text-neutral-400 dark:text-neutral-400 dark:hover:text-neutral-200 transition-colors"
-          >About</a
-        >
+        href="/"
+        aria-label="Go to homepage"
+        class="flex items-center transition-transform duration-200 hover:scale-105"
+      >
+        <img
+          src="/logo.png"
+          alt="Choco logo"
+          width="40"
+          height="40"
+          class="h-10 w-10 rounded-xl object-contain"
+        />
+      </a>
+
+      <div class="flex items-center gap-2">
+        <!-- Navegación de escritorio -->
+        <div class="hidden items-center gap-4 md:flex">
+          <a
+            href="/"
+            class="text-sm text-neutral-600 transition-colors hover:text-neutral-400 dark:text-neutral-400 dark:hover:text-neutral-200 sm:text-base"
+          >
+            Home
+          </a>
+
+          <a
+            href="/services/"
+            class="text-sm text-neutral-600 transition-colors hover:text-neutral-400 dark:text-neutral-400 dark:hover:text-neutral-200 sm:text-base"
+          >
+            Services
+          </a>
+
+          <a
+            href="/projects/"
+            class="text-sm text-neutral-600 transition-colors hover:text-neutral-400 dark:text-neutral-400 dark:hover:text-neutral-200 sm:text-base"
+          >
+            Projects
+          </a>
+
+          <a
+            href="/about/"
+            class="text-sm text-neutral-600 transition-colors hover:text-neutral-400 dark:text-neutral-400 dark:hover:text-neutral-200 sm:text-base"
+          >
+            About
+          </a>
+        </div>
+
+        <!-- Cambio de tema -->
         <button
           id="theme-toggle"
-          class="p-2 rounded-full text-neutral-600 hover:text-neutral-400 dark:text-neutral-400 dark:hover:text-neutral-200 transition-colors"
+          type="button"
+          class="rounded-full p-2 text-neutral-600 transition-colors hover:text-neutral-400 dark:text-neutral-400 dark:hover:text-neutral-200"
           title="Toggle theme"
+          aria-label="Toggle color theme"
         >
           <svg
-            class="w-5 h-5 theme-icon-light hidden"
+            class="theme-icon-light hidden h-5 w-5"
             fill="currentColor"
             viewBox="0 0 20 20"
+            aria-hidden="true"
           >
             <path
               d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
             ></path>
           </svg>
+
           <svg
-            class="w-5 h-5 theme-icon-dark hidden"
+            class="theme-icon-dark hidden h-5 w-5"
             fill="currentColor"
             viewBox="0 0 20 20"
+            aria-hidden="true"
           >
             <path
               d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
             ></path>
           </svg>
         </button>
+
+        <!-- Botón hamburguesa -->
+        <button
+          id="mobile-menu-toggle"
+          type="button"
+          class="rounded-lg p-2 text-neutral-600 transition-colors hover:bg-neutral-100 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-neutral-100 md:hidden"
+          aria-label="Open navigation menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <!-- Icono hamburguesa -->
+          <svg
+            class="menu-icon-open h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+
+          <!-- Icono cerrar -->
+          <svg
+            class="menu-icon-close hidden h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menú desplegable móvil -->
+    <div
+  id="mobile-menu"
+  class="absolute left-0 right-0 top-16 hidden border-t border-neutral-200/70 bg-white/95 px-4 pb-4 shadow-lg backdrop-blur-md dark:border-neutral-800/70 dark:bg-neutral-900/95 md:hidden"
+>
+      <div class="flex flex-col gap-1 pt-3">
+        <a
+          href="/"
+          class="mobile-menu-link rounded-lg px-3 py-2 text-base font-medium text-neutral-700 transition-colors hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
+        >
+          Home
+        </a>
+
+        <a
+          href="/services/"
+          class="mobile-menu-link rounded-lg px-3 py-2 text-base font-medium text-neutral-700 transition-colors hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
+        >
+          Services
+        </a>
+
+        <a
+          href="/projects/"
+          class="mobile-menu-link rounded-lg px-3 py-2 text-base font-medium text-neutral-700 transition-colors hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
+        >
+          Projects
+        </a>
+
+        <a
+          href="/about/"
+          class="mobile-menu-link rounded-lg px-3 py-2 text-base font-medium text-neutral-700 transition-colors hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
+        >
+          About
+        </a>
       </div>
     </div>
   </div>
@@ -73,32 +168,68 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    // Cambio de tema
     const themeToggle = document.getElementById("theme-toggle");
-    const lightIcon = themeToggle.querySelector(".theme-icon-light");
-    const darkIcon = themeToggle.querySelector(".theme-icon-dark");
+    const lightIcon = themeToggle?.querySelector(".theme-icon-light");
+    const darkIcon = themeToggle?.querySelector(".theme-icon-dark");
 
-    function updateThemeIcon(isDark) {
-      if (isDark) {
-        lightIcon.classList.add("hidden");
-        darkIcon.classList.remove("hidden");
-      } else {
-        lightIcon.classList.remove("hidden");
-        darkIcon.classList.add("hidden");
-      }
+    function updateThemeIcon(isDark: boolean) {
+      if (!lightIcon || !darkIcon) return;
+
+      lightIcon.classList.toggle("hidden", isDark);
+      darkIcon.classList.toggle("hidden", !isDark);
     }
 
-    const isDark = document.documentElement.classList.contains("dark");
-    updateThemeIcon(isDark);
+    updateThemeIcon(document.documentElement.classList.contains("dark"));
 
-    themeToggle.addEventListener("click", function () {
+    themeToggle?.addEventListener("click", function () {
       const isDark = document.documentElement.classList.contains("dark");
       const newTheme = isDark ? "light" : "dark";
 
       document.documentElement.classList.toggle("dark");
-
       updateThemeIcon(!isDark);
-
       localStorage.setItem("theme", newTheme);
+    });
+
+    // Menú móvil
+    const menuToggle = document.getElementById("mobile-menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const openIcon = menuToggle?.querySelector(".menu-icon-open");
+    const closeIcon = menuToggle?.querySelector(".menu-icon-close");
+    const mobileLinks = document.querySelectorAll(".mobile-menu-link");
+
+    function closeMobileMenu() {
+      mobileMenu?.classList.add("hidden");
+      openIcon?.classList.remove("hidden");
+      closeIcon?.classList.add("hidden");
+      menuToggle?.setAttribute("aria-expanded", "false");
+      menuToggle?.setAttribute("aria-label", "Open navigation menu");
+    }
+
+    menuToggle?.addEventListener("click", function () {
+      if (!mobileMenu) return;
+
+      const isOpening = mobileMenu.classList.contains("hidden");
+
+      mobileMenu.classList.toggle("hidden", !isOpening);
+      openIcon?.classList.toggle("hidden", isOpening);
+      closeIcon?.classList.toggle("hidden", !isOpening);
+
+      menuToggle.setAttribute("aria-expanded", String(isOpening));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpening ? "Close navigation menu" : "Open navigation menu"
+      );
+    });
+
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", closeMobileMenu);
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 768) {
+        closeMobileMenu();
+      }
     });
   });
 </script>

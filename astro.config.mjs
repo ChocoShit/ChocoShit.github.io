@@ -6,6 +6,15 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
 //  adapter: vercel(),
   site: 'https://ChocoShit.github.io',
+
+  i18n:{
+    locales: ["en", "es"],
+    defaultLocale: "en",
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
+  
   integrations: [tailwind()],
   server: {
     port: 4321,

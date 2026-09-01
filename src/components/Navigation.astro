@@ -1,4 +1,30 @@
 ---
+import {
+  translations,
+  defaultLanguage,
+  type Language,
+} from "../i18n/translations";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const currentLanguage = (Astro.currentLocale ?? defaultLanguage) as Language;
+const text = translations[currentLanguage];
+const homeUrl = getRelativeLocaleUrl(currentLanguage, "");
+const servicesUrl = getRelativeLocaleUrl(currentLanguage, "services");
+const projectsUrl = getRelativeLocaleUrl(currentLanguage, "projects");
+const aboutUrl = getRelativeLocaleUrl(currentLanguage, "about");
+const currentPath = Astro.url.pathname
+  .replace(/^\/es(?=\/|$)/, "")
+  .replace(/^\/+|\/+$/g, "");
+
+const alternateLanguage: Language =
+  currentLanguage === "en" ? "es" : "en";
+
+const alternateLanguageUrl = getRelativeLocaleUrl(
+  alternateLanguage,
+  currentPath
+);
+
+const alternateLanguageLabel = alternateLanguage.toUpperCase();
 ---
 
 <nav
@@ -8,9 +34,7 @@
     <div class="flex h-16 items-center justify-between">
       <!-- Logo -->
       <a
-        href="/"
-        aria-label="Go to homepage"
-        class="flex items-center transition-transform duration-200 hover:scale-105"
+        href={homeUrl}
       >
         <img
           src="/logo.png"
@@ -22,44 +46,65 @@
       </a>
 
       <div class="flex items-center gap-2">
+      
         <!-- Navegación de escritorio -->
         <div class="hidden items-center gap-4 md:flex">
           <a
-            href="/"
+            href={homeUrl}
             class="text-sm text-neutral-600 transition-colors hover:text-neutral-400 dark:text-neutral-400 dark:hover:text-neutral-200 sm:text-base"
           >
-            Home
+            {text.navigation.home}
           </a>
 
           <a
-            href="/services/"
+            href={servicesUrl} 
             class="text-sm text-neutral-600 transition-colors hover:text-neutral-400 dark:text-neutral-400 dark:hover:text-neutral-200 sm:text-base"
           >
-            Services
+            {text.navigation.services}
           </a>
 
           <a
-            href="/projects/"
+            href={projectsUrl}
             class="text-sm text-neutral-600 transition-colors hover:text-neutral-400 dark:text-neutral-400 dark:hover:text-neutral-200 sm:text-base"
           >
-            Projects
+            {text.navigation.projects}
           </a>
 
           <a
-            href="/about/"
+            href={aboutUrl}
             class="text-sm text-neutral-600 transition-colors hover:text-neutral-400 dark:text-neutral-400 dark:hover:text-neutral-200 sm:text-base"
           >
-            About
+            {text.navigation.about}
           </a>
+
+          <a
+  href={alternateLanguageUrl}
+  hreflang={alternateLanguage}
+  aria-label={text.actions.switchLanguage}
+  title={text.actions.switchLanguage}
+  class="px-2 py-1 text-sm font-semibold tracking-wide text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 transition-colors"
+>
+  {alternateLanguageLabel}
+</a>
         </div>
+
+        <a
+  href={alternateLanguageUrl}
+  hreflang={alternateLanguage}
+  aria-label={text.actions.switchLanguage}
+  title={text.actions.switchLanguage}
+  class="px-2 py-1 text-xs font-semibold tracking-wide text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 transition-colors md:hidden"
+>
+  {alternateLanguageLabel}
+</a>
 
         <!-- Cambio de tema -->
         <button
           id="theme-toggle"
           type="button"
           class="rounded-full p-2 text-neutral-600 transition-colors hover:text-neutral-400 dark:text-neutral-400 dark:hover:text-neutral-200"
-          title="Toggle theme"
-          aria-label="Toggle color theme"
+          title={text.actions.toggleTheme}
+          aria-label={text.actions.toggleTheme}
         >
           <svg
             class="theme-icon-light hidden h-5 w-5"
@@ -135,32 +180,35 @@
 >
       <div class="flex flex-col gap-1 pt-3">
         <a
-          href="/"
+          href={homeUrl}
           class="mobile-menu-link rounded-lg px-3 py-2 text-base font-medium text-neutral-700 transition-colors hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
         >
-          Home
+          {text.navigation.home}
         </a>
 
         <a
-          href="/services/"
+          href={servicesUrl}
           class="mobile-menu-link rounded-lg px-3 py-2 text-base font-medium text-neutral-700 transition-colors hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
         >
-          Services
+          {text.navigation.services}
         </a>
 
         <a
-          href="/projects/"
+          href={projectsUrl}
           class="mobile-menu-link rounded-lg px-3 py-2 text-base font-medium text-neutral-700 transition-colors hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
         >
-          Projects
+          {text.navigation.projects}
         </a>
 
         <a
-          href="/about/"
+          href={aboutUrl}
           class="mobile-menu-link rounded-lg px-3 py-2 text-base font-medium text-neutral-700 transition-colors hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
         >
-          About
+          {text.navigation.about}
         </a>
+
+        
+
       </div>
     </div>
   </div>

@@ -2,9 +2,21 @@
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import { siteConfig, homeContent } from "../config/content.ts";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import {
+  translations,
+  defaultLanguage,
+  type Language,
+} from "../i18n/translations";
+
+const currentLanguage = (Astro.currentLocale ?? defaultLanguage) as Language;
+const pageText = translations[currentLanguage].home;
+
+const aboutUrl = getRelativeLocaleUrl(currentLanguage, "about");
+const projectsUrl = getRelativeLocaleUrl(currentLanguage, "projects");
 ---
 
-<html lang="en">
+<html lang={Astro.currentLocale ?? "en"}>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -124,18 +136,18 @@ import { siteConfig, homeContent } from "../config/content.ts";
                 <h1
                   class="text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-4xl"
                 >
-                  {homeContent.title}
+                  {pageText.title}
                 </h1>
                 <p
                   class="mt-3 text-lg leading-7 text-neutral-600 dark:text-neutral-400"
                 >
-                  {homeContent.description}
+                  {pageText.description}
                 </p>
                 <div class="flex flex-row gap-4 mt-4">
                   <a
                     class="group inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-neutral-900 rounded-lg hover:bg-neutral-800 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-200 transition-all duration-300 hover:scale-105 cursor-pointer"
-                    href={homeContent.buttons.about.href}
-                    >{homeContent.buttons.about.text}<svg
+                    href={aboutUrl}
+                    >{pageText.buttons.about}<svg
                       class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"
                       fill="none"
                       stroke="currentColor"
@@ -149,8 +161,8 @@ import { siteConfig, homeContent } from "../config/content.ts";
                   >
                   <a
                     class="group inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-neutral-900 bg-white border border-neutral-300 rounded-lg hover:bg-neutral-50 dark:bg-neutral-800 dark:text-neutral-100 dark:border-neutral-600 dark:hover:bg-neutral-700 transition-all duration-300 hover:scale-105 cursor-pointer"
-                    href={homeContent.buttons.projects.href}
-                    >{homeContent.buttons.projects.text}<svg
+                    href={projectsUrl}
+                    >{pageText.buttons.projects}<svg
                       class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"
                       fill="none"
                       stroke="currentColor"

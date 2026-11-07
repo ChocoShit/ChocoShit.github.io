@@ -17,7 +17,11 @@ jobs:
         with:
           node-version: 20
       - run: npm install --no-audit --no-fund
-      - run: npm run build
+      - run: npm run build 2>&1 | tee build.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: build.log
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

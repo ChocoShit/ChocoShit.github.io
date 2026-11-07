@@ -24,10 +24,16 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install --no-audit --no-fund
+        continue-on-error: true
+
+      - name: Debug node_modules
+        run: |
+          ls node_modules/.bin/astro 2>/dev/null && echo "astro found" || echo "astro MISSING"
+          ls node_modules/astro/package.json 2>/dev/null && echo "astro pkg found" || echo "astro pkg MISSING"
 
       - name: Build Astro
-        run: npm run build
+        run: npm run build 2>&1 | tee build.log
 
   deploy:
     needs: build

@@ -22,6 +22,20 @@ export const translations = {
             projects: "View Projects",
         },
     },
+    languages: {
+      en: "English",
+      es: "Español",
+    },
+    education: {
+      title: "Education",
+      master: "Master in Intelligent Systems",
+      masterDetail: "University of Salamanca (USAL) — in progress",
+      graduate: "Graduate in Systems Engineering",
+      graduateDetail: "Universidad Cesar Vallejo",
+    },
+    languagesSection: {
+      title: "Languages",
+    },
   },
 
   es: {
@@ -46,6 +60,16 @@ export const translations = {
             about: "Sobre mí",
             projects: "Ver proyectos",
         },
+    },
+    education: {
+      title: "Educación",
+      master: "Máster en Sistemas Inteligentes",
+      masterDetail: "Universidad de Salamanca (USAL) — en curso",
+      graduate: "Graduado en Ingeniería de Sistemas",
+      graduateDetail: "Universidad Cesar Vallejo",
+    },
+    languagesSection: {
+      title: "Idiomas",
     },
   },
 } as const;

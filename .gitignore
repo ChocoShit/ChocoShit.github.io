@@ -22,3 +22,10 @@ dist/
 # logs
 *.log
 .edgeone/
+
+# playwright captures
+.playwright-mcp/
+
+# local screenshots
+repo_*.png
+portfolio-*.png

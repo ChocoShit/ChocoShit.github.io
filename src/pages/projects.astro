@@ -184,9 +184,20 @@ import { projectsContent } from "../config/content.ts";
                           </g>
                         </svg>
                       </span>
-                      <span class="text-sm text-neutral-600 dark:text-neutral-400 block truncate">
+                      <span class="text-sm text-neutral-600 dark:text-neutral-400 block">
                         {project.description}
                       </span>
+                      {
+                        project.tags && (
+                          <span class="flex flex-wrap gap-1 mt-3">
+                            {project.tags.map((tag) => (
+                              <span class="px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800 rounded-full">
+                                {tag}
+                              </span>
+                            ))}
+                          </span>
+                        )
+                      }
                     </span>
                   </span>
                 </a>

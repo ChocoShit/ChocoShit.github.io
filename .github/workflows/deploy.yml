@@ -23,10 +23,13 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm install --no-audit --no-fund --prefer-offline
+        run: npm install --no-audit --no-fund 2>&1
+
+      - name: Check astro version
+        run: npx astro --version 2>&1
 
       - name: Build Astro
-        run: npm run build
+        run: npx astro build 2>&1
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4

@@ -6,7 +6,9 @@ import {
 } from "../i18n/translations";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
-const currentLanguage = (Astro.currentLocale ?? defaultLanguage) as Language;
+const currentLanguage: Language = Astro.url.pathname.startsWith("/es")
+  ? "es"
+  : "en";
 const text = translations[currentLanguage];
 const homeUrl = getRelativeLocaleUrl(currentLanguage, "");
 const servicesUrl = getRelativeLocaleUrl(currentLanguage, "services");

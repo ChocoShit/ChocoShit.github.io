@@ -9,14 +9,16 @@ import {
   type Language,
 } from "../i18n/translations";
 
-const currentLanguage = (Astro.currentLocale ?? defaultLanguage) as Language;
+const currentLanguage: Language = Astro.url.pathname.startsWith("/es")
+  ? "es"
+  : "en";
 const pageText = translations[currentLanguage].home;
 
 const aboutUrl = getRelativeLocaleUrl(currentLanguage, "about");
 const projectsUrl = getRelativeLocaleUrl(currentLanguage, "projects");
 ---
 
-<html lang={Astro.currentLocale ?? "en"}>
+<html lang={currentLanguage}>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />

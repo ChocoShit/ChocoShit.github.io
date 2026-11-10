@@ -2,61 +2,14 @@
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import { siteConfig } from "../config/content.ts";
-import { defaultLanguage, type Language } from "../i18n/translations";
+import { translations, defaultLanguage, type Language } from "../i18n/translations";
 
 const currentLanguage: Language = Astro.url.pathname.startsWith("/es")
   ? "es"
   : "en";
 
-const services = [
-  {
-    number: "01",
-    title: "Software Development",
-    description:
-      "Development of customized software solutions for businesses, professionals and personal projects.",
-    items: [
-      "Web applications",
-      "Desktop applications",
-      "Mobile applications",
-    ],
-  },
-  {
-    number: "02",
-    title: "Interactive Experiences",
-    description:
-      "Creation of educational and immersive applications using interactive technologies.",
-    items: [
-      "Educational games",
-      "Virtual reality applications",
-      "Augmented reality applications",
-    ],
-  },
-  {
-    number: "03",
-    title: "Computer Support",
-    description:
-      "Installation, maintenance and technical assistance for desktop and portable computers.",
-    items: [
-      "Computer assembly",
-      "Desktop and laptop maintenance",
-      "Software installation and configuration",
-      "Remote technical support",
-    ],
-  },
-  {
-    number: "04",
-    title: "Smart Home & Security",
-    description:
-      "Installation and configuration of connected devices for safer and more efficient spaces.",
-    items: [
-      "Security cameras",
-      "Alexa devices",
-      "Home automation",
-      "Smart locks",
-      "Smart lights and switches",
-    ],
-  },
-];
+const servicesTranslations = translations[currentLanguage].services;
+const services = Object.values(servicesTranslations.items);
 ---
 
 <html lang={currentLanguage}>
@@ -177,18 +130,17 @@ const services = [
     <p
       class="mb-2 text-sm font-semibold uppercase tracking-widest text-neutral-500 dark:text-neutral-400"
     >
-      What I can do
+      {servicesTranslations.subtitle}
     </p>
 
     <h1
       class="text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-4xl"
     >
-      Services
+      {servicesTranslations.title}
     </h1>
 
     <p class="mt-4 max-w-2xl text-neutral-600 dark:text-neutral-400">
-      Technology solutions organized according to your development, technical
-      support and smart home needs.
+      {servicesTranslations.description}
     </p>
   </div>
 
@@ -215,7 +167,7 @@ const services = [
           </p>
 
           <ul class="mt-5 space-y-3">
-            {service.items.map((item) => (
+            {service.list.map((item) => (
               <li
                 class="flex items-start gap-3 text-neutral-700 dark:text-neutral-300"
               >

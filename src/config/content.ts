@@ -192,36 +192,90 @@ export const projectsContent = {
     title: "Projects - Rodrigo Moncada",
     description: "Selected projects: AI, robotics, web and automation.",
   },
-  title: "Projects",
-  description:
-    "A selection of my projects across AI, robotics, web development and automation. Each one solves a real problem with the tools I know best.",
-  projects: [
-    {
-      title: "Chef_IA",
-      description:
-        "Recipe recommendation assistant combining fuzzy logic with a neural network. Deployed on Streamlit Cloud as an interactive cooking assistant.",
-      tags: ["Python", "Fuzzy Logic", "Neural Network", "Streamlit"],
-      image: "/assets/images/projects/chef_ia.png",
-      href: "https://github.com/ChocoShit/Chef_IA",
-      stars: "fuzzy + NN",
-    },
-    {
-      title: "iRobot Roomba 650",
-      description:
-        "Control and odometry system for the Roomba 650 robot. Sensor unification with the 149-byte package, safety logic and a desktop GUI.",
-      tags: ["Python", "ROS", "Robotics", "Serial"],
-      image: "/assets/images/projects/irobot_roomba.png",
-      href: "https://github.com/ChocoShit/irobot_roomba",
-      stars: "odometry",
-    },
-    {
-      title: "Telegram Finanzas Bot",
-      description:
-        "Budget management bot built on the Telegram API with Excel export. ConversationHandler for tracking income and expenses.",
-      tags: ["Python", "Telegram API", "Excel"],
-      image: "/assets/images/projects/telegram_bot.png",
-      href: "https://github.com/ChocoShit/Telegram_Finanzas_bot",
-      stars: "budget",
-    },
-  ],
+  en: {
+    title: "Projects",
+    description:
+      "A selection of my projects across AI, robotics, web development and automation. Each one solves a real problem with the tools I know best.",
+    projects: [
+      {
+        title: "Chef_IA",
+        description:
+          "Recipe recommendation assistant combining fuzzy logic with a neural network. Deployed on Streamlit Cloud as an interactive cooking assistant.",
+        tags: ["Python", "Fuzzy Logic", "Neural Network", "Streamlit"],
+        image: "/assets/images/projects/chef_ia.png",
+        href: "https://github.com/ChocoShit/Chef_IA",
+        stars: "fuzzy + NN",
+      },
+      {
+        title: "iRobot Roomba 650",
+        description:
+          "Control and odometry system for the Roomba 650 robot. Sensor unification with the 149-byte package, safety logic and a desktop GUI.",
+        tags: ["Python", "ROS", "Robotics", "Serial"],
+        image: "/assets/images/projects/irobot_roomba.png",
+        href: "https://github.com/ChocoShit/irobot_roomba",
+        stars: "odometry",
+      },
+      {
+        title: "Telegram Finanzas Bot",
+        description:
+          "Budget management bot built on the Telegram API with Excel export. ConversationHandler for tracking income and expenses.",
+        tags: ["Python", "Telegram API", "Excel"],
+        image: "/assets/images/projects/telegram_bot.png",
+        href: "https://github.com/ChocoShit/Telegram_Finanzas_bot",
+        stars: "budget",
+      },
+      {
+        title: "E-commerce",
+        description:
+          "Full-stack e-commerce platform built with React and Node.js, featuring product management, shopping cart, and payment integration.",
+        tags: ["React", "Node.js", "MongoDB", "Express"],
+        image: "/assets/images/projects/portfolio.png",
+        href: "https://github.com/ChocoShit/e-commerce",
+        stars: "fullstack",
+      },
+    ],
+  },
+  es: {
+    title: "Proyectos",
+    description:
+      "Una selección de mis proyectos en IA, robótica, desarrollo web y automatización. Cada uno resuelve un problema real con las herramientas que mejor conozco.",
+    projects: [
+      {
+        title: "Chef_IA",
+        description:
+          "Asistente de recomendación de recetas que combina lógica difusa con una red neuronal. Desplegado en Streamlit Cloud como asistente de cocina interactivo.",
+        tags: ["Python", "Lógica Difusa", "Red Neuronal", "Streamlit"],
+        image: "/assets/images/projects/chef_ia.png",
+        href: "https://github.com/ChocoShit/Chef_IA",
+        stars: "fuzzy + NN",
+      },
+      {
+        title: "iRobot Roomba 650",
+        description:
+          "Sistema de control y odometría para el robot Roomba 650. Unificación de sensores con el paquete de 149 bytes, lógica de seguridad y una interfaz gráfica de escritorio.",
+        tags: ["Python", "ROS", "Robótica", "Serial"],
+        image: "/assets/images/projects/irobot_roomba.png",
+        href: "https://github.com/ChocoShit/irobot_roomba",
+        stars: "odometry",
+      },
+      {
+        title: "Bot de Telegram Finanzas",
+        description:
+          "Bot de gestión de presupuestos construido sobre la API de Telegram con exportación a Excel. ConversationHandler para seguir ingresos y gastos.",
+        tags: ["Python", "API de Telegram", "Excel"],
+        image: "/assets/images/projects/telegram_bot.png",
+        href: "https://github.com/ChocoShit/Telegram_Finanzas_bot",
+        stars: "budget",
+      },
+      {
+        title: "E-commerce",
+        description:
+          "Plataforma de comercio electrónico de full stack construida con React y Node.js, con gestión de productos, carrito de compras e integración de pagos.",
+        tags: ["React", "Node.js", "MongoDB", "Express"],
+        image: "/assets/images/projects/portfolio.png",
+        href: "https://github.com/ChocoShit/e-commerce",
+        stars: "fullstack",
+      },
+    ],
+  },
 };

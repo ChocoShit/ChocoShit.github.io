@@ -229,7 +229,7 @@ export const projectsContent = {
         description:
           "Full-stack e-commerce platform built with React and Node.js, featuring product management, shopping cart, and payment integration.",
         tags: ["React", "Node.js", "MongoDB", "Express"],
-        image: "/assets/images/projects/portfolio.png",
+        image: "/assets/images/projects/ecommerce.jpeg",
         href: "https://github.com/ChocoShit/e-commerce",
         stars: "fullstack",
       },
@@ -272,7 +272,7 @@ export const projectsContent = {
         description:
           "Sistema de control y odometría para el robot Roomba 650. Unificación de sensores con el paquete de 149 bytes, lógica de seguridad y una interfaz gráfica de escritorio.",
         tags: ["Python", "ROS", "Robótica", "Serial"],
-        image: "/assets/images/projects/irobot_roomba.png",
+        image: "/assets/images/projects/roomba.jpeg",
         href: "https://github.com/ChocoShit/irobot_roomba",
         stars: "odometry",
       },
@@ -281,7 +281,7 @@ export const projectsContent = {
         description:
           "Bot de gestión de presupuestos construido sobre la API de Telegram con exportación a Excel. ConversationHandler para seguir ingresos y gastos.",
         tags: ["Python", "API de Telegram", "Excel"],
-        image: "/assets/images/projects/telegram_bot.png",
+        image: "/assets/images/projects/moneybot_logo.png",
         href: "https://github.com/ChocoShit/Telegram_Finanzas_bot",
         stars: "budget",
       },
@@ -290,7 +290,7 @@ export const projectsContent = {
         description:
           "Plataforma de comercio electrónico de full stack construida con React y Node.js, con gestión de productos, carrito de compras e integración de pagos.",
         tags: ["React", "Node.js", "MongoDB", "Express"],
-        image: "/assets/images/projects/portfolio.png",
+        image: "/assets/images/projects/ecommerce.jpeg",
         href: "https://github.com/ChocoShit/e-commerce",
         stars: "fullstack",
       },

@@ -202,7 +202,7 @@ export const projectsContent = {
         description:
           "Recipe recommendation assistant combining fuzzy logic with a neural network. Deployed on Streamlit Cloud as an interactive cooking assistant.",
         tags: ["Python", "Fuzzy Logic", "Neural Network", "Streamlit"],
-        image: "/assets/images/projects/chef_ia.png",
+        image: "/assets/images/projects/chef_bot.jpeg",
         href: "https://github.com/ChocoShit/Chef_IA",
         stars: "fuzzy + NN",
       },
@@ -211,7 +211,7 @@ export const projectsContent = {
         description:
           "Control and odometry system for the Roomba 650 robot. Sensor unification with the 149-byte package, safety logic and a desktop GUI.",
         tags: ["Python", "ROS", "Robotics", "Serial"],
-        image: "/assets/images/projects/irobot_roomba.png",
+        image: "/assets/images/projects/roomba.jpeg",
         href: "https://github.com/ChocoShit/irobot_roomba",
         stars: "odometry",
       },
@@ -220,7 +220,7 @@ export const projectsContent = {
         description:
           "Budget management bot built on the Telegram API with Excel export. ConversationHandler for tracking income and expenses.",
         tags: ["Python", "Telegram API", "Excel"],
-        image: "/assets/images/projects/telegram_bot.png",
+        image: "/assets/images/projects/moneybot_logo.png",
         href: "https://github.com/ChocoShit/Telegram_Finanzas_bot",
         stars: "budget",
       },
@@ -263,7 +263,7 @@ export const projectsContent = {
         description:
           "Asistente de recomendación de recetas que combina lógica difusa con una red neuronal. Desplegado en Streamlit Cloud como asistente de cocina interactivo.",
         tags: ["Python", "Lógica Difusa", "Red Neuronal", "Streamlit"],
-        image: "/assets/images/projects/chef_ia.png",
+        image: "/assets/images/projects/chef_bot.jpeg",
         href: "https://github.com/ChocoShit/Chef_IA",
         stars: "fuzzy + NN",
       },

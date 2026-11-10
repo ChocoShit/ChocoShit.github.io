@@ -12,7 +12,8 @@ const currentLanguage: Language = Astro.url.pathname.startsWith("/es")
   ? "es"
   : "en";
 const about = aboutContent[currentLanguage];
-const lang = translations[currentLanguage].languagesSection;
+const education = translations[currentLanguage].education;
+const languagesSection = translations[currentLanguage].languagesSection;
 ---
 
 <html lang={currentLanguage}>
@@ -208,27 +209,27 @@ const lang = translations[currentLanguage].languagesSection;
         <div class="flex flex-col md:flex-row mt-20">
           <div class="flex-1">
             <h2 class="mb-2 text-2xl font-bold dark:text-neutral-200">
-              {lang.education.title}
+              {education.title}
             </h2>
             <div class="py-4">
               <p class="text-sm font-medium text-neutral-900 dark:text-neutral-100">
-                {lang.education.master}
+                {education.master}
               </p>
               <p class="text-xs uppercase tracking-widest text-neutral-400 dark:text-neutral-500">
-                {lang.education.masterDetail}
+                {education.masterDetail}
               </p>
               <p class="mt-3 text-sm font-medium text-neutral-900 dark:text-neutral-100">
-                {lang.education.graduate}
+                {education.graduate}
               </p>
               <p class="text-xs uppercase tracking-widest text-neutral-400 dark:text-neutral-500">
-                {lang.education.graduateDetail}
+                {education.graduateDetail}
               </p>
             </div>
           </div>
 
           <div class="w-full md:w-[360px] md:ml-8 mt-12 md:mt-0">
             <h2 class="mb-2 text-2xl font-bold dark:text-neutral-200">
-              {lang.languages.title}
+              {languagesSection.title}
             </h2>
             <div class="py-4 flex flex-col gap-3">
               {

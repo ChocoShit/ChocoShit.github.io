@@ -1,10 +1,11 @@
 import { defineConfig } from 'astro/config';
+import vercel from '@astrojs/vercel';
 import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://ChocoShit.github.io',
-  output: 'static',
+  adapter: vercel(),
 
   i18n: {
     locales: ["en", "es"],

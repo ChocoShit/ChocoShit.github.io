@@ -45,6 +45,8 @@ export const translations = {
         robotics: "Robotics",
         budget: "Budget",
         fullstack: "Fullstack",
+        unity: "Unity",
+        academic: "Academic",
       },
     },
     services: {
@@ -146,6 +148,8 @@ export const translations = {
         robotics: "Robótica",
         budget: "Presupuesto",
         fullstack: "Fullstack",
+        unity: "Unity",
+        academic: "Académico",
       },
     },
     services: {

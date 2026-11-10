@@ -233,6 +233,24 @@ export const projectsContent = {
         href: "https://github.com/ChocoShit/e-commerce",
         stars: "fullstack",
       },
+      {
+        title: "Unity 3D Project",
+        description:
+          "Interactive 3D application developed in Unity for the UCV project, combining game mechanics, physics and user interaction.",
+        tags: ["Unity", "C#", "3D"],
+        image: "/assets/images/projects/unity_ucv.png",
+        href: "https://github.com/ChocoShit/proyecto_ucv",
+        stars: "unity",
+      },
+      {
+        title: "Drive Académico",
+        description:
+          "Academic drive management platform developed for practical training, handling student records, activities and evaluation.",
+        tags: ["C#", ".NET", "SQL"],
+        image: "/assets/images/projects/drive_academico.png",
+        href: "https://github.com/ChocoShit/DRIVE_ACADEMICO_UCV",
+        stars: "academic",
+      },
     ],
   },
   es: {
@@ -275,6 +293,24 @@ export const projectsContent = {
         image: "/assets/images/projects/portfolio.png",
         href: "https://github.com/ChocoShit/e-commerce",
         stars: "fullstack",
+      },
+      {
+        title: "Unity 3D Project",
+        description:
+          "Aplicación interactiva 3D desarrollada en Unity para el proyecto UCV, combinando mecánicas de juego, física e interacción de usuario.",
+        tags: ["Unity", "C#", "3D"],
+        image: "/assets/images/projects/unity_ucv.png",
+        href: "https://github.com/ChocoShit/proyecto_ucv",
+        stars: "unity",
+      },
+      {
+        title: "Drive Académico",
+        description:
+          "Plataforma de gestión académica desarrollada para prácticas, gestionando registros de estudiantes, actividades y evaluación.",
+        tags: ["C#", ".NET", "SQL"],
+        image: "/assets/images/projects/drive_academico.png",
+        href: "https://github.com/ChocoShit/DRIVE_ACADEMICO_UCV",
+        stars: "academic",
       },
     ],
   },
